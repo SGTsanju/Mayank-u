@@ -25,7 +25,12 @@
     }
 
     function yes() {
-      document.getElementById("msg").innerHTML = 
+      // Mobile vibration
+      if (navigator.vibrate) {
+        navigator.vibrate([200, 100, 200]);
+      }
+
+      document.getElementById("msg").innerHTML =
         "Yay! She said YES! ❤️🥰";
     }
   </script>
